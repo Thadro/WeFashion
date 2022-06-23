@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeFashion</title>
-    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/product.css')}}">
 </head>
 <body>
     <header>
@@ -24,46 +24,37 @@
         </div>
     </header>
 
-    <main>
-        <section>
-            <div class="result"><p>4 result</p></div>
-            <div class="card-ctnr">
-                <a href="{{ route('product') }}" class="card">
-                    <img src="{{asset('img/hommes/0693445251_1_1_1.jpg')}}" alt="">
-                    <p>Nom du produit</p>
-                    <p>Prix</p>
-                </a>
-                <a href="{{ route('product') }}" class="card">
-                    <img src="{{asset('img/hommes/0693445251_1_1_1.jpg')}}" alt="">
-                    <p>Nom du produit</p>
-                    <p>Prix</p>
-                </a>
-                <a href="{{ route('product') }}" class="card">
-                    <img src="{{asset('img/hommes/0693445251_1_1_1.jpg')}}" alt="">
-                    <p>Nom du produit</p>
-                    <p>Prix</p>
-                </a>
-                <a href="{{ route('product') }}" class="card">
-                    <img src="{{asset('img/hommes/0693445251_1_1_1.jpg')}}" alt="">
-                    <p>Nom du produit</p>
-                    <p>Prix</p>
-                </a>
-                <a href="{{ route('product') }}" class="card">
-                    <img src="{{asset('img/hommes/0693445251_1_1_1.jpg')}}" alt="">
-                    <p>Nom du produit</p>
-                    <p>Prix</p>
-                </a>
-                <a href="{{ route('product') }}" class="card">
-                    <img src="{{asset('img/hommes/0693445251_1_1_1.jpg')}}" alt="">
-                    <p>Nom du produit</p>
-                    <p>Prix</p>
-                </a>
+    <main class="main-product">
+        <section class="info-product">
+            <div class="produit-ctnr">
+                <div class="img-info">
+                    <div class="img-ctnr">
+                        <img src="{{asset('img/femmes/Wxl-_Port_Jackson-031.jpg')}}" alt="">
+                    </div>
+                    <div class="infos-produit">
+                        <p>Catégorie : Femme</p>
+                        <p>Nom : Manteau</p>
+                        <form action="">
+                            <select name="taille" id="taille">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                            <button type="submit">ACHETER</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="description-product">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos suscipit vitae similique cum beatae cupiditate. Eius, molestiae. Ratione laudantium a magni quis ut odio quos perferendis, esse exercitationem, repudiandae laboriosam?</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-ctnr">
+        <div class="footer-ctnr footer-product" >
             <div class="infos-ctnr">
                 <ul>
                     <li><a href="">Mentions légales</a></li>

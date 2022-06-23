@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    position: relative;
 }
 
 header{
@@ -22,10 +23,9 @@ header{
     margin-right: 50px;
 }
 
-.header-ctnr img{
+.header-ctnr .accueil{
     width: 20%;
     height: 100%;
-    object-fit: cover;
 }
 
 nav{
@@ -96,13 +96,25 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 5px;
     box-shadow: 5px 5px 10px 2px #9E9E9E;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: ease 0.5s;
+}
+
+.card:hover{
+    transition: ease 0.5s;
+    transform: scale(1.05);
+    box-shadow: 10px 10px 3px 1px #9E9E9E;
 }
 
 .card img{
     width: 100%;
     height: 70%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     object-fit: cover;
 }
 
@@ -119,8 +131,16 @@ footer{
     justify-content: space-around;
 }
 
+.footer-ctnr{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .infos-ctnr{
     width: 30%;
+    
 }
 
 .infos-ctnr ul{
@@ -136,6 +156,7 @@ footer{
 
 .service-ctnr{
     width: 30%;
+    margin-right: 50px;
 }
 
 .service-ctnr ul{
@@ -152,8 +173,57 @@ footer{
 
 
 .social{
-    width: 30%;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 50px;
 }
+
+.facebook{
+    display: flex;
+    align-items: center;
+}
+
+.facebook a{
+    text-decoration: none;
+    color: white;
+    transition: ease 0.5s;
+}
+
+.facebook a:hover{
+    transition: ease 0.5s;
+    color: green;
+}
+
+.instagram{
+    display: flex;
+    align-items: center;
+}
+
+.instagram a{
+    text-decoration: none;
+    color: white;
+    transition: ease 0.5s;
+}
+
+.instagram a:hover{
+    transition: ease 0.5s;
+    color: green;
+}
+
+.newsletter{
+    display: flex;
+    align-items: center;
+}
+
+.newsletter a{
+    text-decoration: none;
+    color: white;
+    transition: ease 0.5s;
+}
+
+.newsletter a:hover{
+    transition: ease 0.5s;
+    color: green;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
