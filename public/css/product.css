@@ -84,5 +84,21 @@ form button:hover{
 }
 
 
+@media (max-width: 1023px) {
+    
+    .main-product {
+        width: 100%;
+        height: auto;
+    }
 
+    .info-product{
+        width: 100%;
+        height: auto;
+    }
+
+    .produit-ctnr{
+        min-height: 400px;
+    }
+    
+}
 

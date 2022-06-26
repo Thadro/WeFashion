@@ -6,7 +6,7 @@
             <div class="produit-ctnr">
                 <div class="img-info">
                     <div class="img-ctnr">
-                        <img src="{{ asset('storage/'.$product->image) }}" alt="">
+                        <img src="{{ str_replace('img/contrib', 'img/img/contrib', asset($product->image)) }}" alt="">
                     </div>
                     <div class="infos-produit">
                         <p>Catégorie : {{ $product->category->name }}</p>

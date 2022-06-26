@@ -61,7 +61,7 @@ class Product extends Model
     {
         $attribute_name = "image";
         $disk = "public";
-        $destination_path = "products";
+        $destination_path = "img/contrib";
 
         $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
     }

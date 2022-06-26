@@ -14,7 +14,7 @@
           		@foreach($products as $product)
 
               <a href="{{ route('product', ['id' => $product->id]) }}" class="card">
-                  <img src="{{ asset('storage/'.$product->image) }}"  alt="">
+                  <img src="{{ str_replace('img/contrib', 'img/img/contrib', asset($product->image)) }}"  alt="">
                   <p>{{ $product->name }}</p>
                   <p>{{ $product->price }}€</p>
               </a>

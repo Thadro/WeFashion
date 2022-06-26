@@ -120,6 +120,7 @@ section{
 
 .card p{
     margin-top: 30px;
+    padding: 5px 20px;
 }
 
 footer{
@@ -226,4 +227,56 @@ footer{
 .newsletter a:hover{
     transition: ease 0.5s;
     color: green;
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+}
+
+/* Responsive */
+
+@media (max-width: 1023px) {
+    
+    .header-ctnr{
+        width: 75%;
+    }
+    
+    section{
+        width: 90%;
+    }
+    
+    .card{
+        width: 45%;
+        min-height: 350px;
+        height: 100%;
+    }
+
+    footer{
+        height: auto;
+    }
+
+    .footer-ctnr{
+        width: 90%;
+        justify-content: space-between;
+        margin: 10vw 0;
+    }
+
+    .infos-ctnr{
+        width: 30%;
+    }
+
+    .infos-ctnr ul{
+        align-items: flex-start;
+    }
+
+    .infos-ctnr ul li {
+        margin: 10px 0;
+    }
+
+    .service-ctnr{
+        margin-right: 0;
+        width: 30%;
+    }
+
+    .social{
+        width: 30%;
+        flex-direction: column;
+        margin-left: 0;
+    }
+}
