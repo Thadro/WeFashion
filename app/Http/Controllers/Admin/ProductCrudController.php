@@ -28,7 +28,7 @@ class ProductCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Product::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/product');
-        CRUD::setEntityNameStrings('product', 'products');
+        CRUD::setEntityNameStrings('un produit', 'produits');
     }
 
     /**
@@ -40,11 +40,13 @@ class ProductCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('id');
+        CRUD::column('identifier');
         //CRUD::column('image');
         CRUD::column('name');
         //CRUD::column('description');
         CRUD::column('price');
         CRUD::column('category_id');
+        CRUD::column('has_discount');
         //CRUD::column('created_at');
         //CRUD::column('updated_at');
 
@@ -66,6 +68,12 @@ class ProductCrudController extends CrudController
         CRUD::setValidation(ProductRequest::class);
 
         //CRUD::field('id');
+        CRUD::addField([
+				    'name'  => 'identifier',
+				    'label' => "Identifiant",
+				    'type'  => 'text',
+				    'default' => uniqid(16)
+				]);
         
         //CRUD::field('image');
         CRUD::addField([   // Upload
@@ -84,7 +92,7 @@ class ProductCrudController extends CrudController
         
         //CRUD::field('category_id');
         CRUD::addField([  // Select
-				   'label'     => "Category",
+				   'label'     => "Categorie",
 				   'type'      => 'select',
 				   'name'      => 'category_id', // the db column for the foreign key
 
@@ -101,7 +109,13 @@ class ProductCrudController extends CrudController
 				   'options'   => (function ($query) {
 				        return $query->orderBy('name', 'ASC')->get();
 				    }), //  you can use this to filter the results show in the select
-				]); 
+				]);
+
+				CRUD::addField([
+			    'name'  => 'has_discount',
+			    'label' => 'Soldé',
+			    'type'  => 'checkbox'
+				]);
 
         //CRUD::field('created_at');
         //CRUD::field('updated_at');

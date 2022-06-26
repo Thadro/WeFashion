@@ -28,7 +28,7 @@ class CategoryCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Category::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/category');
-        CRUD::setEntityNameStrings('category', 'categories');
+        CRUD::setEntityNameStrings('une catégorie', 'Catégories');
     }
 
     /**
@@ -39,7 +39,7 @@ class CategoryCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
+        //CRUD::column('id');
         CRUD::column('name');
         //CRUD::column('created_at');
         //CRUD::column('updated_at');

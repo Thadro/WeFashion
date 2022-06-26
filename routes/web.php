@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', [PageController::class, 'discount'])->name('welcome');
 
-Route::get('/produit', function () {
-    return view('product');
-})->name('product');
+Route::get('/category/{id}', [PageController::class, 'category'])->name('category');
+
+Route::get('/product/{id}', [PageController::class, 'product'])->name('product');

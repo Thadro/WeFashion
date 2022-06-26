@@ -35,8 +35,8 @@ class Product extends Model
     |--------------------------------------------------------------------------
     */
    
-   	public function categories() {
-	    return $this->belongsTo('Category');
+   	public function category() {
+	    return $this->belongsTo('App\Models\Category');
 	  }
 
     /*
